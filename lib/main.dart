@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rakatdaan/Screens/Authentication/Registration.dart';
 import 'package:rakatdaan/Screens/Authentication/Signin.dart';
 
-import 'package:rakatdaan/Screens/Authentication/Signup.dart';
+import 'package:rakatdaan/Screens/Authentication/OtpScreeb.dart';
 import 'package:rakatdaan/Screens/HomeScreen.dart';
 
 void main() {
@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         /*Authentication*/
         Registration.id:(context)=>Registration(),
         SignIn.id:(context)=>SignIn(),
+        Otpscreen.id:(context)=>Otpscreen(),
         /*HomeScreen*/
         Homescreen.id:(context)=>Homescreen()
       },

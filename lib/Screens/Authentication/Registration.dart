@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_final_fields, unused_field, use_key_in_widget_constructors, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:rakatdaan/Screens/HomeScreen.dart';
 import 'package:rakatdaan/Util/Colors/Color.dart';
 import 'package:rakatdaan/Widget/Formfiled.dart';
 
@@ -227,18 +228,23 @@ class _RegistrationState extends State<Registration> {
               height: size.height*0.1,
             ),
             Center(
-              child: Container(
-          height: size.height*0.08,
-          width: size.width*0.5,
-          decoration: BoxDecoration(
-            color: vwhite,
-            borderRadius: BorderRadius.circular(30)
-          ),
-          child: Center(
-            child: Text("SUBMIT",style: TextStyle(color: vred,fontWeight:FontWeight.bold),
-          ),
-              ),
-            ) ),
+              child: InkWell(
+                onTap:(){
+                  Navigator.pushNamed(context, Homescreen.id);
+                } ,
+                child: Container(
+                        height: size.height*0.08,
+                        width: size.width*0.5,
+                        decoration: BoxDecoration(
+                          color: vwhite,
+                          borderRadius: BorderRadius.circular(30)
+                        ),
+                        child: Center(
+                          child: Text("SUBMIT",style: TextStyle(color: vred,fontWeight:FontWeight.bold),
+                        ),
+                ),
+                          ),
+              ) ),
             
             SizedBox(
               height: size.height*0.1,
