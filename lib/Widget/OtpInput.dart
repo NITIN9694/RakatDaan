@@ -34,22 +34,21 @@ class _OTPInputState extends State<OTPInput> {
           ),
           child: TextFormField(
          obscureText: true,
-          keyboardType: TextInputType.phone,
-            controller: widget.controller,
-            cursorColor: vred,
-             decoration:  InputDecoration(
-               filled: true,
-          enabledBorder: InputBorder.none,
-          errorBorder: InputBorder.none,
-          disabledBorder: InputBorder.none,
-          border: InputBorder.none,
-         ),  style: TextStyle(
-              color: vred,
-              fontSize: 21,
-             
-            ),
-              onChanged: (value){
-          if(value.length == 1 && widget.last == false){
+         keyboardType: TextInputType.phone,
+         controller: widget.controller,
+         cursorColor: vred,
+         decoration:  InputDecoration(
+         filled: true,
+         enabledBorder: InputBorder.none,
+         errorBorder: InputBorder.none,
+         disabledBorder: InputBorder.none,
+         border: InputBorder.none,
+         ), 
+         style: TextStyle(
+         color: vred,
+         fontSize: 21, ),
+         onChanged: (value){
+         if(value.length == 1 && widget.last == false){
             FocusScope.of(context).nextFocus();
           }
           if(value.length == 0 &&  widget.first == false){

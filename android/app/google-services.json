@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "364037033847",
+    "project_id": "rakatdan",
+    "storage_bucket": "rakatdan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364037033847:android:006daa8ebcd3139d4a5b72",
+        "android_client_info": {
+          "package_name": "com.example.rakatdaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364037033847-12ee4kksqond3v3k9jnt93pnb8pcdtvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rakatdaan",
+            "certificate_hash": "ec9e14edbedc9c9eb27e69f9a22ed8e7de12adaa"
+          }
+        },
+        {
+          "client_id": "364037033847-90dv8pfqcja20ru82sskpsnastf4a0k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOh50OzDVpZfIV900gH141kn9yCAhBGoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364037033847-90dv8pfqcja20ru82sskpsnastf4a0k6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

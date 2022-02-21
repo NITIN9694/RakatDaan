@@ -81,23 +81,18 @@ static const LatLng _center =  LatLng(27.560932, 76.625015);
         backgroundColor: vwhite,
         body: Stack(
           children: [
-          
-            GoogleMap(
-              markers: _markers,
-              onMapCreated: _onMapCreated,
-              initialCameraPosition: CameraPosition(
-                zoom: 10,
-              target: _center,
-              
-              
-              ),
-            ),
-             Padding(
-               padding:  EdgeInsets.all(20.0),
-               child: SearchTile(),
+          GoogleMap(
+          markers: _markers,
+          onMapCreated: _onMapCreated,
+          initialCameraPosition: CameraPosition(
+          zoom: 10,
+          target: _center,)),
+          Padding(
+          padding:  EdgeInsets.all(20.0),
+          child: SearchTile(),
              ),
-            Positioned(
-              bottom: 0,
+         Positioned(
+         bottom: 0,
               left: 0,
               child: Container(
                 width: size.width,
@@ -105,7 +100,6 @@ static const LatLng _center =  LatLng(27.560932, 76.625015);
                 child: Stack(
                   overflow: Overflow.visible,
                   children: [
-    
                     CustomPaint(
                       size: Size(size.width, 80),
                       painter: Bottombar(),

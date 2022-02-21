@@ -1,14 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rakatdaan/Screens/Authentication/Registration.dart';
 import 'package:rakatdaan/Screens/Authentication/Signin.dart';
 
-import 'package:rakatdaan/Screens/Authentication/OtpScreeb.dart';
+import 'package:rakatdaan/Screens/Authentication/Singup.dart';
 import 'package:rakatdaan/Screens/HomeScreen.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); 
   runApp(const MyApp());
 }
 
@@ -21,16 +24,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RakatDaan',
-     theme: ThemeData(
+      theme: ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily
        ),
 
-      home:SignIn(),
+      home:Signup(),
       routes: {
         /*Authentication*/
         Registration.id:(context)=>Registration(),
         SignIn.id:(context)=>SignIn(),
-        Otpscreen.id:(context)=>Otpscreen(),
+        Signup.id:(context)=>Signup(),
         /*HomeScreen*/
         Homescreen.id:(context)=>Homescreen()
       },

@@ -29,27 +29,25 @@ class _SearchTileState extends State<SearchTile> {
           Padding(
             padding:  EdgeInsets.only(left:size.width*0.05),
             child: Align(
-              alignment: Alignment.centerLeft,
-              child: DropdownButton(
-                underline: SizedBox(),
-                hint: Text("Select Blood Group"),
-                onChanged: (String? newvalue){
-                  setState(() {
-                  _selectedgroup=newvalue;
-                  });
-                },
-                value: _selectedgroup,
-                items: _blood.map((bloodgroup) {
-                   return DropdownMenuItem(
-                    child:Text(bloodgroup),
-                    value: bloodgroup,
-                     );
-                }).toList()
+            alignment: Alignment.centerLeft,
+            child: DropdownButton(
+            underline: SizedBox(),
+            hint: Text("Select Blood Group"),
+            onChanged: (String? newvalue){
+            setState(() {
+            _selectedgroup=newvalue;
+            });},
+            value: _selectedgroup,
+            items: _blood.map((bloodgroup) {
+            return DropdownMenuItem(
+            child:Text(bloodgroup),
+            value: bloodgroup,);
+              }).toList()
               ),
             ),
           ),
           SizedBox(
-            width: size.width*0.2,
+           width: size.width*0.2,
           ),
           Icon(Icons.search,color: Colors.grey,)
         ],
