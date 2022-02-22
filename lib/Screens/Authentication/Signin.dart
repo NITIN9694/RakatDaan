@@ -4,7 +4,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:rakatdaan/Classes/Authclass.dart';
+import  'package:rakatdaan/Firebasedata/Authclass.dart';
 import 'package:rakatdaan/Screens/HomeScreen.dart';
 import 'package:rakatdaan/Util/Colors/Color.dart';
 import 'package:rakatdaan/Widget/Loginform.dart';

@@ -39,8 +39,7 @@ static const LatLng _center =  LatLng(27.560932, 76.625015);
             onTap: () {
               // Navigator.push(context, MaterialPageRoute(
               //     builder: (context) =>
-
-              //     // OTPScreen(mode: widget.mode,otp: data.data["otp"].toString(),
+              // //     // OTPScreen(mode: widget.mode,otp: data.data["otp"].toString(),
               //     //   otptoken: data.data["otptoken"],),
               //     ServiceDetailsScreen(idofservice: "1",title: "dummy data",description: "dummy data"),
               // ),
@@ -49,14 +48,11 @@ static const LatLng _center =  LatLng(27.560932, 76.625015);
             },
             position: LatLng(27.560932, 76.625015),
             infoWindow: InfoWindow(
-                title: 'O+'
-            )
+            title: 'O+'
+            )) );
 
-        )
-    );
-
-    _markers.add(
-        Marker(
+        _markers.add(
+           Marker(
             onTap: () {
               // Navigator.push(context, MaterialPageRoute(
               //   builder: (context) =>

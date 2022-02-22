@@ -3,7 +3,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:rakatdaan/Classes/Authclass.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'package:rakatdaan/Firebasedata/Authclass.dart';
 import 'package:rakatdaan/Screens/Authentication/Registration.dart';
 import 'package:rakatdaan/Util/Colors/Color.dart';
 import 'package:rakatdaan/Widget/Loginform.dart';
@@ -33,6 +35,9 @@ class _SignupState extends State<Signup> {
     setState(() {
       isloding=true;
     });
+   SharedPreferences preferences =await SharedPreferences.getInstance();
+   
+   preferences.setString("name", _name.text);
     String res=await AuthMethod().signupuser(email:_email.text, password: _pass.text,username: _name.text);
     print(res);
     Navigator.pushNamed(context, Registration.id);
@@ -109,7 +114,7 @@ class _SignupState extends State<Signup> {
                             ),
                             InkWell(
                               onTap: () {
-                                singupuser();
+                              singupuser();
                               },
                               child: Container(
                                 height: size.height * 0.07,
