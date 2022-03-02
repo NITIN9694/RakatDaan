@@ -298,35 +298,35 @@ class _RegistrationState extends State<Registration> {
       // print(_currentPosition.latitude.toString());
       // print(_currentPosition.longitude.toString());
   }
-  Future<void> getCurrentLocation() async {
-    // SharedPreferences pref = await SharedPreferences.getInstance();
-    if (mounted)
-      setState(() {
-        loadingLocation = true;
-      });
-    try {
-        // _location.text="hui";
-       Position p = await Geolocator.getCurrentPosition();
+  // Future<void> getCurrentLocation() async {
+  //   // SharedPreferences pref = await SharedPreferences.getInstance();
+  //   if (mounted)
+  //     setState(() {
+  //       loadingLocation = true;
+  //     });
+  //   try {
+  //       // _location.text="hui";
+  //      Position p = await Geolocator.getCurrentPosition();
         
-      print(p.latitude);
-       print(p.longitude);
-      _currentPosition=p;
+  //     print(p.latitude);
+  //      print(p.longitude);
+  //     _currentPosition=p;
        
-      // _location.text = '(${p.longitude}, ${p.latitude})';
-      List<Placemark> placemarks =
-      await placemarkFromCoordinates(p.latitude, p.longitude);
+  //     // _location.text = '(${p.longitude}, ${p.latitude})';
+  //     List<Placemark> placemarks =
+  //     await placemarkFromCoordinates(p.latitude, p.longitude);
        
-      Placemark place = placemarks[0];
-      print(place.subLocality+place.locality);
-       setState(() {
-       _location.text = "${place.subLocality +" "+place.locality+" "+place.postalCode} ";
-       _city.text ="${place.locality}";
-       _country.text="${place.country}";
-      loadingLocation = false; 
-     });
+  //     Placemark place = placemarks[0];
+  //     print(place.subLocality+place.locality);
+  //      setState(() {
+  //      _location.text = "${place.subLocality +" "+place.locality+" "+place.postalCode} ";
+  //      _city.text ="${place.locality}";
+  //      _country.text="${place.country}";
+  //     loadingLocation = false; 
+  //    });
      
-    } catch (e) {
-      print(e.toString);
-    }
-  }
+  //   } catch (e) {
+  //     print(e.toString);
+  //   }
+  // }
 }
